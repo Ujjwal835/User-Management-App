@@ -25,11 +25,9 @@ export const addNewUserFormControls = [
   },
 ];
 
-export const addNewUserFormInitialState = [
-  {
-    firstName: "",
-    lastName: "",
-    email: "",
-    address: "",
-  },
-];
+export const addNewUserFormInitialState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  address: "",
+};

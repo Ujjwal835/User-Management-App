@@ -28,7 +28,7 @@ export default function AddNewUser() {
 
   function handleSaveButtonValid() {
     return Object.keys(addNewUserFormData).every(
-      (key) => addNewUserFormData[key].trim !== ""
+      (key) => addNewUserFormData[key].trim() !== ""
     );
   }
 
@@ -88,9 +88,9 @@ export default function AddNewUser() {
             ))}
             <DialogFooter>
               <Button
-                className="disabled:opacity-55"
-                disabled={!handleSaveButtonValid()}
                 type="submit"
+                disabled={!handleSaveButtonValid()}
+                className="disabled:opacity-55"
               >
                 Save
               </Button>
