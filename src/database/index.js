@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const connectToDB = async () => {
-  const url =
-    "mongodb+srv://ujjwaljindal835:nextuser123@cluster0.sfauc5c.mongodb.net/";
+  const url = process.env.MONGODB_URL;
+
   mongoose
     .connect(url)
     .then(() => console.log("Database connection is successful"))
